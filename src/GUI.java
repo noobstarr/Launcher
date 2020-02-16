@@ -86,26 +86,26 @@ public class GUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == website) {
 			try {
-	            Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
+	            Desktop.getDesktop().browse(new URL("http://www.miscellania-ps.com").toURI());
 	        } catch (Exception e) {
 	        	e.printStackTrace();
 	        }
 		} else if (event.getSource() == vote) {
 			try {
-	            Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
+	            Desktop.getDesktop().browse(new URL("http://www.miscellania-ps.com/vote.html").toURI());
 	        } catch (Exception e) {
 	        	e.printStackTrace();
 	        }
 		} else if (event.getSource() == hiscore) {
 			try {
-	            Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
+	            Desktop.getDesktop().browse(new URL("http://www.miscellania-ps.com/scores.html").toURI());
 	        } catch (Exception e) {
 	        	e.printStackTrace();
 	        }
 		} else if (event.getSource() == update) {
 			try {
-				downloadFile("http://miscellania-ps.com/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
-				downloadFile("http://miscellania-ps.com/version.dat", System.getProperty("user.home")+"/317version.dat");
+				downloadFile("https://www.dl.dropboxusercontent.com/s/mnf2dk7i1ll3zpy/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
+				downloadFile("https://www.dl.dropboxusercontent.com/s/3atbnnawptyukxn/version.dat", System.getProperty("user.home")+"/317version.dat");
 				JOptionPane.showMessageDialog(null, "The game is is done updating, Click play!",
 						"Orion", JOptionPane.PLAIN_MESSAGE);
 	        } catch (Exception e) {
@@ -125,8 +125,8 @@ public class GUI extends JFrame implements ActionListener {
 		} else {
 			JOptionPane.showMessageDialog(null, "The game files need to be downloaded, click ok to begin.",
 				"Download", JOptionPane.PLAIN_MESSAGE);
-			downloadFile("http://miscellania-ps.com/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
-			downloadFile("http://miscellania-ps.com/version.dat", System.getProperty("user.home")+"/317version.dat");
+			downloadFile("https://www.dl.dropboxusercontent.com/s/mnf2dk7i1ll3zpy/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
+			downloadFile("https://www.dl.dropboxusercontent.com/s/3atbnnawptyukxn/version.dat", System.getProperty("user.home")+"/317version.dat");
 			try {
 				Desktop.getDesktop().open(execute);
 			} catch (IOException e) {
@@ -142,7 +142,7 @@ public class GUI extends JFrame implements ActionListener {
 		String i = null;
         String i2 = null;
 		try {
-		URL url = new URL("http://miscellania-ps.com/version.dat");
+		URL url = new URL("https://www.dl.dropboxusercontent.com/s/3atbnnawptyukxn/version.dat");
 		br = new BufferedReader(new FileReader(System.getProperty("user.home")+"/317version.dat"));	
         BufferedReader read = new BufferedReader(
         new InputStreamReader(url.openStream()));
@@ -154,8 +154,8 @@ public class GUI extends JFrame implements ActionListener {
         if (value != value2) {
 			JOptionPane.showMessageDialog(null, "Updates found! Click ok to download them.",
 					"Download", JOptionPane.PLAIN_MESSAGE);
-				downloadFile("http://miscellania-ps.com/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
-				downloadFile("http://miscellania-ps.com/version.dat", System.getProperty("user.home")+"/317version.dat");
+				downloadFile("https://www.dl.dropboxusercontent.com/s/mnf2dk7i1ll3zpy/client.jar", System.getProperty("user.home")+"/Miscellania.jar");
+				downloadFile("https://www.dl.dropboxusercontent.com/s/3atbnnawptyukxn/version.dat", System.getProperty("user.home")+"/317version.dat");
 		}
         read.close();
 		} catch (Exception exception) {
